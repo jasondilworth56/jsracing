@@ -1,6 +1,6 @@
-import * as ct from '../constants.js';
+const { ct }  = require('../constants.js')
 
-export class ChartData {
+class ChartData {
     constructor(category, type, content) {
         this.category = category;
         this.type = type;
@@ -23,7 +23,7 @@ export class ChartData {
        
 }
     
-export class IRating {
+class IRating {
     constructor (timestamp, value) {
         this.value=value;
         this.timestamp=timestamp;
@@ -35,3 +35,9 @@ export class IRating {
         
 }
     
+const chartData = {
+    ChartData: ChartData, 
+    IRating: IRating 
+}
+
+module.exports = { chartData }

@@ -1,6 +1,6 @@
-import { parseEncode } from '../helpers.js';
+const { parseEncode } = require('../helpers.js')
 
-export class LastRacesStats {
+class LastRacesStats {
     constructor(data) {
         this.date = data['date']
         this.incidents = data['incidents']
@@ -20,3 +20,9 @@ export class LastRacesStats {
         this.winner_name = parseEncode(data['winnerName'])
     }
 }
+
+const careerData = {
+    LastRacesStats: LastRacesStats
+}
+
+module.exports = { careerData }

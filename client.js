@@ -1,10 +1,15 @@
-import fetch from 'node-fetch';
-import { URL, URLSearchParams } from 'url';
-import * as ct from './constants.js';
-import * as chartData from './responseObjects/chartData.js';
-import * as careerData from './responseObjects/careerStats.js';
+const { fetch } = require('node-fetch');
+// import fetch from 'node-fetch';
+// import { URL, URLSearchParams } from 'url';
+const {URL, URLSearchParams} = require('url');
+const { ct } = require('./constants.js');
+const { chartData } = require('./responseObjects/chartData.js')
+const { careerData } = require('./responseObjects/careerStats.js')
+// import * as ct from './constants.js';
+// import * as chartData from './responseObjects/chartData.js';
+// import * as careerData from './responseObjects/careerStats.js';
 
-export default class Client {
+class Client {
     constructor(username, password) {
         this.username = username;
         this.password = password;
@@ -126,3 +131,5 @@ export default class Client {
     
 }
 
+
+module.exports = {Client}
