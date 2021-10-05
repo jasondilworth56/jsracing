@@ -1,0 +1,15 @@
+{
+  "name": "jsracing",
+  "version": "0.0.1",
+  "description": "A port of pyracing",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Dilworth",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": ">=2.0.0 <3.0.0"
+  },
+  "type": "module"
+}
