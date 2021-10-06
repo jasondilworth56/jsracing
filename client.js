@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+console.log(`FETCH: ${fetch}`);
 // import fetch from 'node-fetch';
 // import { URL, URLSearchParams } from 'url';
 import { URL, URLSearchParams } from 'url';
