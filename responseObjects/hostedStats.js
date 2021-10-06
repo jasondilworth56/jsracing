@@ -7,7 +7,7 @@ class HostedStats {
         this.incidents = data.incidents
         this.pos_start = data.classstartingposition
         this.pos_finish = data.classfinishingposition
-        this.subsession_id = data.sessionid
+        this.subsession_id = data.subsessionid
         this.track = parseEncode(data.track_name)
         this.winner_name = data.winner_displayname
 
@@ -56,9 +56,9 @@ class HostedStats {
         this.rn = data.rn
         this.rollingstarts = data.rollingstarts
         this.sessionfastlap = data.sessionfastlap
+        this.sessionid = data.sessionid
         this.sessionname = parseEncode(data.sessionname)
         this.subsessionfinishedat = data.subsessionfinishedat
-        this.subsessionid = data.subsessionid
         this.timeofday = data.timeofday
         this.trackid = data.trackid
         this.weather_fog_density = data.weather_fog_density
