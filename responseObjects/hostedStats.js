@@ -2,14 +2,21 @@ import { parseEncode } from '../helpers.js'
 
 class HostedStats {
     constructor(data) {
+        // these ones we're matching to careerStats.LastRacesStats
+        this.time = new Date(data['start_time'])
+        this.incidents = data['incidents']
+        this.pos_start = data['classstartingposition']
+        this.pos_finish = data['classfinishingposition']
+        this.subsessionid = data['sessionid']
+        this.track = parseEncode(data['track_name'])
+        this.winner_name = data['winner_displayname']
+
+        // these are the extras
         this.bestlaptime = data['bestlaptime']
         this.carclassid = data['carclassid']
         this.carids = parseEncode(data['carids'])
         this.catid = data['catid']
-        this.classfinishingposition = data['classfinishingposition']
-        this.classstartingposition = data['classstartingposition']
         this.created = new Date(data['created'])
-        this.finishingposition = data['finishingposition']
         this.fixed_setup = data['fixed_setup']
         this.fullcoursecautions = data['fullcoursecautions']
         this.hardcorelevel = data['hardcorelevel']
@@ -22,7 +29,6 @@ class HostedStats {
         this.host_helmet_helmettype = data['host_helmet_helmettype']
         this.host_helmet_pattern = data['host_helmet_pattern']
         this.host_licenselevel = data['host_licenselevel']
-        this.incidents = data['incidents']
         this.lonequalify = data['lonequalify']
         this.max_pct_fuel_fills = parseEncode(data['max_pct_fuel_fills'])
         this.maxdrivers = data['maxdrivers']
@@ -32,6 +38,8 @@ class HostedStats {
         this.minliclevel = data['minliclevel']
         this.multiclass = data['multiclass']
         this.numfasttows = data['numfasttows']
+        this.overallfinishingposition = data['finishingposition']
+        this.overallstartingposition = data['startingposition']
         this.practicelength = data['practicelength']
         this.private = data['private']
         this.privatesessionid = data['privatesessionid']
@@ -48,13 +56,9 @@ class HostedStats {
         this.rn = data['rn']
         this.rollingstarts = data['rollingstarts']
         this.sessionfastlap = data['sessionfastlap']
-        this.sessionid = data['sessionid']
         this.sessionname = parseEncode(data['sessionname'])
-        this.start_time = new Date(data['start_time'])
-        this.startingposition = data['startingposition']
         this.subsessionfinishedat = data['subsessionfinishedat']
         this.subsessionid = data['subsessionid']
-        this.track_name = parseEncode(data['track_name'])
         this.timeofday = data['timeofday']
         this.trackid = data['trackid']
         this.weather_fog_density = data['weather_fog_density']
@@ -67,7 +71,6 @@ class HostedStats {
         this.weather_wind_speed_units = data['weather_wind_speed_units']
         this.weather_wind_speed_value = data['weather_wind_speed_value']
         this.weight_penalties = parseEncode(data['weight_penalties'])
-        this.winner_displayname = data['winner_displayname']
         this.winner_displaynames = parseEncode(data['winner_displaynames'])
         this.winner_helmet_color1 = data['winner_helmet_color1']
         this.winner_helmet_color2 = data['winner_helmet_color2']
