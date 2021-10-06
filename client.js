@@ -141,8 +141,13 @@ export class Client {
 
         try {
             // response.json().then(text => console.log(text));
-            const data = await response.json().catch(error => console.log(error));
-            return data.rows.map(x => new hostedData.HostedStats(x))
+            const data = await response.json();
+            if (data.rows) {
+                return data.rows.map(x => new hostedData.HostedStats(x))
+            } else {
+                return [];
+            }
+            
         } catch(error) {
             console.error(error);
             return [];
