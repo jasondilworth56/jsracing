@@ -1,7 +1,9 @@
 // Context sites for the 2 types of endpoints
+const mSite = 'https://members.iracing.com/membersite/member';
+const mStats = 'https://members.iracing.com/memberstats/member';
+
 const ct = {
-    mSite:'https://members.iracing.com/membersite/member',
-    mStats:'https://members.iracing.com/memberstats/member',
+    
 
     // IRACING SERVICE URLS
     URL_LOGIN:'https://members.iracing.com/membersite/login.jsp',
@@ -10,85 +12,85 @@ const ct = {
     URL_HOME:'https://members.iracing.com/membersite/member/Home.do',
 
     // THE BIG ONES
-    URL_DRIVER_STATS:(this.mStats + '/GetDriverStats'),
-    URL_SUBS_RESULTS:(this.mSite + '/GetSubsessionResults'),
-    URL_CURRENT_SEASONS:(this.mSite + '/GetSeasons'),
-    URL_SEASON_STANDINGS:(this.mStats + '/GetSeasonStandings'),
-    URL_SERIES_RACERESULTS:(this.mStats + '/GetSeriesRaceResults'),
+    URL_DRIVER_STATS:(mStats + '/GetDriverStats'),
+    URL_SUBS_RESULTS:(mSite + '/GetSubsessionResults'),
+    URL_CURRENT_SEASONS:(mSite + '/GetSeasons'),
+    URL_SEASON_STANDINGS:(mStats + '/GetSeasonStandings'),
+    URL_SERIES_RACERESULTS:(mStats + '/GetSeriesRaceResults'),
 
     // RECENT HISTORICAL
-    URL_LASTRACE_STATS:(this.mStats + '/GetLastRacesStats'),
-    URL_LAST_SERIES:(this.mStats + '/GetLastSeries'),
-    URL_RESULTS:(this.mStats + '/GetResults'),
-    URL_WORLD_RECORDS:(this.mStats + '/GetWorldRecords'),
+    URL_LASTRACE_STATS:(mStats + '/GetLastRacesStats'),
+    URL_LAST_SERIES:(mStats + '/GetLastSeries'),
+    URL_RESULTS:(mStats + '/GetResults'),
+    URL_WORLD_RECORDS:(mStats + '/GetWorldRecords'),
 
     // UPCOMING SESSIONS
-    URL_SESSION_TIMES:(this.mSite + '/GetSessionTimes'),
-    URL_NEXT_EVENT:(this.mSite + '/GetNextEvent'),
-    URL_TOTALREGISTERED:(this.mSite + '/GetTotalSessionJoinedCountsBySeason'),
-    URL_RACEGUIDE:(this.mSite + '/GetRaceGuide'),
-    URL_ACTIVEOP_COUNT:(this.mSite + '/GetActiveOpenPracticeCount'),
+    URL_SESSION_TIMES:(mSite + '/GetSessionTimes'),
+    URL_NEXT_EVENT:(mSite + '/GetNextEvent'),
+    URL_TOTALREGISTERED:(mSite + '/GetTotalSessionJoinedCountsBySeason'),
+    URL_RACEGUIDE:(mSite + '/GetRaceGuide'),
+    URL_ACTIVEOP_COUNT:(mSite + '/GetActiveOpenPracticeCount'),
 
     // Not yet implemented
     //  can be used without parameters for all hosted sessions
-    // URL_HOSTED_SESSIONS:(this.mSite + '/GetHostedSessions',
+    // URL_HOSTED_SESSIONS:(mSite + '/GetHostedSessions',
     //                       'ts=0' or 'privateSessionID=1801560')
 
     // DRIVER PROFILE STATS
-    URL_STATS_CHART:(this.mStats + '/GetChartData'),
-    URL_CAREER_STATS:(this.mStats + '/GetCareerStats'),
-    URL_YEARLY_STATS:(this.mStats + '/GetYearlyStats'),
-    URL_PERSONAL_BESTS:(this.mStats + '/GetPersonalBests'),
+    URL_STATS_CHART:(mStats + '/GetChartData'),
+    URL_CAREER_STATS:(mStats + '/GetCareerStats'),
+    URL_YEARLY_STATS:(mStats + '/GetYearlyStats'),
+    URL_PERSONAL_BESTS:(mStats + '/GetPersonalBests'),
 
     // RACE SPECIFIC RESULTS
-    URL_LAPS_SINGLE:(this.mSite + '/GetLaps'),
-    URL_LAPS_ALL:(this.mSite + '/GetLapChart'),
+    URL_LAPS_SINGLE:(mSite + '/GetLaps'),
+    URL_LAPS_ALL:(mSite + '/GetLapChart'),
 
     // UTILITY ?
-    URL_MEM_SUBSESSID:(this.mSite + '/GetSubsessionForMember'),
-    URL_CARS_DRIVEN:(this.mStats + '/GetCarsDriven'),
-    URL_PRIVATE_RESULTS:(this.mStats + '/GetPrivateSessionResults'),
-    URL_CAR_CLASS:(this.mSite + '/GetCarClassById'),
-    URL_TICKER_SESSIONS:(this.mSite + '/GetTickerSessions'),
-    URL_SEASON_FOR_SESSION:(this.mSite + '/GetSeasonForSession'),
-    URL_ALL_SUBSESSIONS:(this.mSite + '/GetAllSubsessions'),
+    URL_MEM_SUBSESSID:(mSite + '/GetSubsessionForMember'),
+    URL_CARS_DRIVEN:(mStats + '/GetCarsDriven'),
+    URL_PRIVATE_RESULTS:(mStats + '/GetPrivateSessionResults'),
+    URL_CAR_CLASS:(mSite + '/GetCarClassById'),
+    URL_TICKER_SESSIONS:(mSite + '/GetTickerSessions'),
+    URL_SEASON_FOR_SESSION:(mSite + '/GetSeasonForSession'),
+    URL_ALL_SUBSESSIONS:(mSite + '/GetAllSubsessions'),
 
     // // TEAMS (Not yet implemented)
-    // URL_TEAM_STANDINGS:(this.mStats + '/GetTeamStandings'),
-    // URL_SESSION_TEAMS:(this.mStats + '/GetSessionTeams',
+    // URL_TEAM_STANDINGS:(mStats + '/GetTeamStandings'),
+    // URL_SESSION_TEAMS:(mStats + '/GetSessionTeams',
     //                      'subSessionID=')
-    // URL_TEAM_SESSIONS:(this.mSite + '/GetTeamSessions',
+    // URL_TEAM_SESSIONS:(mSite + '/GetTeamSessions',
     //                      'teamID=-11456')
-    // URL_TEAM_MEMBERS:(this.mSite + '/GetTeamMembers'),
-    // URL_TEAM_DIRECTORY:(this.mSite + '/GetTeamDirectory'),
+    // URL_TEAM_MEMBERS:(mSite + '/GetTeamMembers'),
+    // URL_TEAM_DIRECTORY:(mSite + '/GetTeamDirectory'),
 
     // LEAGUES (Not yet implemented)
-    // URL_LEAGUE_DIRECTORY:(this.mSite + '/GetLeagueDirectory',
+    // URL_LEAGUE_DIRECTORY:(mSite + '/GetLeagueDirectory',
     //                        'restrictToMember=0'
     //                         '&lowerbound=1'
     //                         '&upperbound=33'
     //                         '&tag=Clean')  // Param 'tag' takes a string list
-    // URL_LEAGUE_SESSIONS:(this.mSite + '/GetLeagueSessions',
+    // URL_LEAGUE_SESSIONS:(mSite + '/GetLeagueSessions',
     //                        '?ts=0'
     //                        '&startRow=1'
     //                        '&stopRow=20'
     //                        '&rand=522840')
-    // URL_LEAGUE_TAGS:(this.mSite + '/GetLeagueTags'),
-    // URL_LEAGUE_OFFSET:(this.mSite + '/GetLeagueImageOffsets',
+    // URL_LEAGUE_TAGS:(mSite + '/GetLeagueTags'),
+    // URL_LEAGUE_OFFSET:(mSite + '/GetLeagueImageOffsets',
     //                      'leagueid=1056')
-    // URL_LEAGUE_CALENDAR_YEAR:(this.mSite + '/GetLeagueCalendarByMonth',
+    // URL_LEAGUE_CALENDAR_YEAR:(mSite + '/GetLeagueCalendarByMonth',
     //                             'leagueID=1056'
     //                             '&year=2020'
     //                             '&month=7')
-    // URL_LEAGUE_TAGS:(this.mSite + '/GetTagsOnLeague',
+    // URL_LEAGUE_TAGS:(mSite + '/GetTagsOnLeague',
     //                    'leagueID=1056')
-    // URL_LEAGUE_MEMBERS:(this.mSite + '/GetLeagueMembers',
+    // URL_LEAGUE_MEMBERS:(mSite + '/GetLeagueMembers',
     //                       'leagueid=1056'
     //                       'lowerBound=1'
     //                       'upperBound=26'
     //                       'search=')
-    // URL_LEAGUE_WALL:(this.mSite + '/GetLeagueWall'),
-    // URL_LEAGUE_POST:(this.mSite + '/PostLeagueMessage'  // IT'S A POST!!!!,
+    // URL_LEAGUE_WALL:(mSite + '/GetLeagueWall'),
+    // URL_LEAGUE_POST:(mSite + '/PostLeagueMessage'  // IT'S A POST!!!!,
     //                    'sendEmail=0'
     //                    '&postToWall=1'
     //                    '&sendPM=0'
@@ -97,28 +99,28 @@ const ct = {
     //                    '&leagueID=1056')
 
     // Only parameter is a leagueID
-    URL_LEAGUE_SEASONS:(this.mSite + '/GetLeagueSeasons'),
-    // URL_LEAGUE_CALENDAR_SEASON:(this.mSite + '/GetLeagueCalendarBySeason',
+    URL_LEAGUE_SEASONS:(mSite + '/GetLeagueSeasons'),
+    // URL_LEAGUE_CALENDAR_SEASON:(mSite + '/GetLeagueCalendarBySeason',
     //                               'leagueID=1056'
     //                               '&leagueSeasonID=46493')
-    // URL_LEAGUE_SEASON_TEAM_STANDINGS:(this.mSite + '/GetLeagueSeasonTeamStandings',
+    // URL_LEAGUE_SEASON_TEAM_STANDINGS:(mSite + '/GetLeagueSeasonTeamStandings',
     //                                     'leagueID=1056'
     //                                     '&leagueSeasonID=46493')
 
 
     // Parameters: leagueID, leagueSeasonID, carClassID, carID
     // only first 2 required
-    URL_LEAGUE_SEASON_STANDINGS:(this.mSite + '/GetLeagueSeasonStandings'),
+    URL_LEAGUE_SEASON_STANDINGS:(mSite + '/GetLeagueSeasonStandings'),
 
     // Required param leagueid
-    URL_LEAGUE:(this.mSite + '/GetLeague'),
+    URL_LEAGUE:(mSite + '/GetLeague'),
 
-    // URL_LEAGUE_ICALENDAR_SUBSCRIBE:(this.mSite + '/GetICalendarForLeague',
+    // URL_LEAGUE_ICALENDAR_SUBSCRIBE:(mSite + '/GetICalendarForLeague',
     //                                   'leagueId=1056'
     //                                   '&leagueSeasonId=46493')
 
 
-    // URL_TOURNAMENTS:(this.mSite + '/GetTournaments',
+    // URL_TOURNAMENTS:(mSite + '/GetTournaments',
     //                    'ongoingonly=1' or 'sessionname=' or 'participant_custid='
     //                    or 'host_custid=435144'  // continuation of last line
     //                    '&lowerbound=1'
@@ -127,20 +129,20 @@ const ct = {
     //                    '&order=desc'
     //                    'start_time_lowerbound=1594710000000'
     //                    '&start_time_upperbound=1595055600000')
-    // URL_TOURNAMENT_ROUND:(this.mSite + '/GetTournamentRoundDetails',
+    // URL_TOURNAMENT_ROUND:(mSite + '/GetTournamentRoundDetails',
     //                         'pvtId=1799376'
     //                         'nextId=1798708')
 
     // // FARMS
-    // URL_FARM_TRACKS:(this.mSite + '/GetFarmTracks',
+    // URL_FARM_TRACKS:(mSite + '/GetFarmTracks',
     //                    'farmID=11')
-    // URL_FARM_CARS:(this.mSite + '/GetFarmCars',
+    // URL_FARM_CARS:(mSite + '/GetFarmCars',
     //                  'farmID=')
     // ESSENTIALLY USELESS URLS
 
     // Driver Status is the
-    URL_DRIVER_STATUS:(this.mSite + '/GetDriverStatus'),
-    URL_MEM_DIVISION:(this.mSite + '/GetMembersDivision'),
+    URL_DRIVER_STATUS:(mSite + '/GetDriverStatus'),
+    URL_MEM_DIVISION:(mSite + '/GetMembersDivision'),
 
 
     License:{
@@ -487,4 +489,4 @@ const ct = {
     //     ZIMBABWE:'ZW',
 }
 
-module.exports = { ct }
+export default ct

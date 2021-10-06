@@ -1,4 +1,4 @@
-const { ct }  = require('../constants.js')
+import ct from '../constants.js';
 
 class ChartData {
     constructor(category, type, content) {
@@ -40,4 +40,4 @@ const chartData = {
     IRating: IRating 
 }
 
-module.exports = { chartData }
+export default chartData

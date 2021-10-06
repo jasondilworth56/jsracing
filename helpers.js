@@ -1,4 +1,4 @@
-function parseEncode(string) {
+export function parseEncode(string) {
     if (!typeof(string) == String) {
         return '';
     }
@@ -6,4 +6,3 @@ function parseEncode(string) {
     return decodeURIComponent(string).replace(/\+/g," ")
 }
 
-module.exports = { parseEncode }

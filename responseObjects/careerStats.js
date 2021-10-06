@@ -1,4 +1,4 @@
-const { parseEncode } = require('../helpers.js')
+import { parseEncode } from '../helpers.js'
 
 class LastRacesStats {
     constructor(data) {
@@ -25,4 +25,4 @@ const careerData = {
     LastRacesStats: LastRacesStats
 }
 
-module.exports = { careerData }
+export default { careerData }
