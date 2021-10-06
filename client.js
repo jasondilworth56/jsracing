@@ -6,6 +6,7 @@ import { URL, URLSearchParams } from 'url';
 import ct from './constants.js';
 import chartData from './responseObjects/chartData.js';
 import careerData from './responseObjects/careerStats.js';
+import hostedData from './responseObjects/hostedStats.js';
 // import * as ct from './constants.js';
 // import * as chartData from './responseObjects/chartData.js';
 // import * as careerData from './responseObjects/careerStats.js';
@@ -126,6 +127,26 @@ export class Client {
             return [];
         }
         
+    }
+
+    async hostedRacesStats(cust_id) {
+        const payload = {
+            'participant_custid': cust_id, 
+            'start_time_lowerbound': new Date().setDate(new Date().getDate()-30), 
+            'sort': 'start_time', 
+            'order': 'desc'
+        }
+        const url = ct.URL_PRIVATE_RESULTS;
+        const response = await this._build_request(url, payload);
+
+        try {
+            // response.json().then(text => console.log(text));
+            const data = await response.json().catch(error => console.log(error));
+            return data.rows.map(x => new hostedData.HostedStats(x))
+        } catch(error) {
+            console.error(error);
+            return [];
+        }
     }
         
         

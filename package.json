@@ -1,6 +1,6 @@
 {
   "name": "jsracing",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A port of pyracing",
   "main": "client.js",
   "scripts": {
