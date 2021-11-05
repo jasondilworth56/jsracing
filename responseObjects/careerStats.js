@@ -14,10 +14,13 @@ class LastRacesStats {
         this.strength_of_field = data['sof']
         this.subsession_id = data['subsessionID']
         this.time = new Date(data['time'])
+        this.trackID = data['trackID']
         this.track = parseEncode(data['trackName'])
         this.winner_cust_id = data['winnerID']
         this.winner_laps_led = data['winnerLL']
         this.winner_name = parseEncode(data['winnerName'])
+        this.car_id = data['carID']
+
     }
 }
 
@@ -25,4 +28,4 @@ const careerData = {
     LastRacesStats: LastRacesStats
 }
 
-export default { careerData }
+export default careerData
