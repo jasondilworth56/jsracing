@@ -1,15 +1,43 @@
 {
-  "name": "jsracing",
-  "version": "0.0.8",
-  "description": "A port of pyracing",
-  "main": "client.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "git+https://github.com/jasondilworth56/jsracing.git#main",
+  "_id": "jsracing@0.0.2",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/jsracing",
+  "_phantomChildren": {
+    "data-uri-to-buffer": "3.0.1",
+    "fetch-blob": "3.1.2"
   },
-  "author": "Jason Dilworth",
-  "license": "ISC",
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/jasondilworth56/jsracing.git#main",
+    "rawSpec": "https://github.com/jasondilworth56/jsracing.git#main",
+    "saveSpec": "git+https://github.com/jasondilworth56/jsracing.git#main",
+    "fetchSpec": "https://github.com/jasondilworth56/jsracing.git",
+    "gitCommittish": "main"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/jasondilworth56/jsracing.git#6ac47e09b603387ad5f89fbd9a6d43a65e4b2d81",
+  "_spec": "https://github.com/jasondilworth56/jsracing.git#main",
+  "_where": "/Users/jasondilworth/Sites/sanity-eleventy-blog",
+  "author": {
+    "name": "Jason Dilworth"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "node-fetch": "^3.0.0"
   },
-  "type": "module"
+  "deprecated": false,
+  "description": "A port of pyracing",
+  "license": "ISC",
+  "main": "client.js",
+  "name": "jsracing",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "version": "0.0.2"
 }

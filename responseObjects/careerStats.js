@@ -25,4 +25,4 @@ const careerData = {
     LastRacesStats: LastRacesStats
 }
 
-export default careerData
+export default { careerData }
